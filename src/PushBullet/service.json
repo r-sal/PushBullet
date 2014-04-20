@@ -8,13 +8,13 @@
             "httpMethod": "GET",
             "uri": "devices",
             "responseClass": "JsonResponse",
-            "summary": ""
-        },        
+            "summary": "Get the devices that can be pushed to"
+        },
         "file": {
             "httpMethod": "POST",
             "uri": "pushes",
             "responseClass": "JsonResponse",
-            "summary": "",
+            "summary": "Push a file",
             "parameters": {
                 "device_iden": {
                     "location": "postField",
@@ -40,13 +40,13 @@
             "httpMethod": "POST",
             "uri": "pushes",
             "responseClass": "JsonResponse",
-            "summary": "",
+            "summary": "Push a note",
             "parameters": {
                 "device_iden": {
                     "location": "postField",
                     "type": "string",
                     "required": true
-                },                
+                },
                 "title": {
                     "location": "postField",
                     "type": "string",
@@ -56,7 +56,7 @@
                     "location": "postField",
                     "type": "string",
                     "required": true
-                },                
+                },
                 "type": {
                     "location": "postField",
                     "type": "string",
@@ -69,13 +69,13 @@
             "httpMethod": "POST",
             "uri": "pushes",
             "responseClass": "JsonResponse",
-            "summary": "",
+            "summary": "Push a link",
             "parameters": {
                 "device_iden": {
                     "location": "postField",
                     "type": "string",
                     "required": true
-                },                
+                },
                 "title": {
                     "location": "postField",
                     "type": "string",
@@ -85,7 +85,7 @@
                     "location": "postField",
                     "type": "string",
                     "required": true
-                },                
+                },
                 "type": {
                     "location": "postField",
                     "type": "string",
@@ -98,13 +98,13 @@
             "httpMethod": "POST",
             "uri": "pushes",
             "responseClass": "JsonResponse",
-            "summary": "",
+            "summary": "Push a address",
             "parameters": {
                 "device_iden": {
                     "location": "postField",
                     "type": "string",
                     "required": true
-                },                
+                },
                 "name": {
                     "location": "postField",
                     "type": "string",
@@ -114,7 +114,7 @@
                     "location": "postField",
                     "type": "string",
                     "required": true
-                },                
+                },
                 "type": {
                     "location": "postField",
                     "type": "string",
@@ -127,13 +127,13 @@
             "httpMethod": "POST",
             "uri": "pushes",
             "responseClass": "JsonResponse",
-            "summary": "",
+            "summary": "Push a list",
             "parameters": {
                 "device_iden": {
                     "location": "postField",
                     "type": "string",
                     "required": true
-                },                
+                },
                 "title": {
                     "location": "postField",
                     "type": "string",
@@ -143,7 +143,7 @@
                     "location": "postField",
                     "type": ["string","array"],
                     "required": true
-                },                
+                },
                 "type": {
                     "location": "postField",
                     "type": "string",
