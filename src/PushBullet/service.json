@@ -1,0 +1,171 @@
+{
+    "name": "PushBullet",
+    "apiVersion": "1",
+    "baseUrl": "https://api.pushbullet.com/api/",
+    "description": "PushBullet API",
+    "operations": {
+        "devices": {
+            "httpMethod": "GET",
+            "uri": "devices",
+            "responseClass": "JsonResponse",
+            "summary": ""
+        },        
+        "file": {
+            "httpMethod": "POST",
+            "uri": "pushes",
+            "responseClass": "JsonResponse",
+            "summary": "",
+            "parameters": {
+                "device_iden": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },
+                "type": {
+                    "location": "postField",
+                    "type": "string",
+                    "default" : "file",
+                    "required": true
+                },
+                "file": {
+                    "location": "postFile",
+                    "type": "string",
+                    "default" : "file",
+                    "required": true
+                }
+            }
+            
+        },
+        "note": {
+            "httpMethod": "POST",
+            "uri": "pushes",
+            "responseClass": "JsonResponse",
+            "summary": "",
+            "parameters": {
+                "device_iden": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },                
+                "title": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },
+                "body": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },                
+                "type": {
+                    "location": "postField",
+                    "type": "string",
+                    "default" : "note",
+                    "required": true
+                }
+            }
+        },
+        "link": {
+            "httpMethod": "POST",
+            "uri": "pushes",
+            "responseClass": "JsonResponse",
+            "summary": "",
+            "parameters": {
+                "device_iden": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },                
+                "title": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },
+                "url": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },                
+                "type": {
+                    "location": "postField",
+                    "type": "string",
+                    "default" : "link",
+                    "required": true
+                }
+            }
+        },
+        "address": {
+            "httpMethod": "POST",
+            "uri": "pushes",
+            "responseClass": "JsonResponse",
+            "summary": "",
+            "parameters": {
+                "device_iden": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },                
+                "name": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },
+                "address": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },                
+                "type": {
+                    "location": "postField",
+                    "type": "string",
+                    "default" : "address",
+                    "required": true
+                }
+            }
+        },
+        "list": {
+            "httpMethod": "POST",
+            "uri": "pushes",
+            "responseClass": "JsonResponse",
+            "summary": "",
+            "parameters": {
+                "device_iden": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },                
+                "title": {
+                    "location": "postField",
+                    "type": "string",
+                    "required": true
+                },
+                "items": {
+                    "location": "postField",
+                    "type": ["string","array"],
+                    "required": true
+                },                
+                "type": {
+                    "location": "postField",
+                    "type": "string",
+                    "default" : "list",
+                    "required": true
+                }
+            }
+        }
+    },
+    "models": {
+        "JsonResponse": {
+            "type": "array",
+            "properties": {
+                "name": {
+                    "location": "json",
+                    "type": "string"
+                },
+                "status": {
+                    "location": "statusCode",
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "r-sal/PushBullet",
+    "type": "library",
+    "description": "PushBullet PHP API Client",
+    "keywords": ["PushBullet"],
+    "license": "MIT",
+	"authors": [
+        {
+            "name": "Rick S",
+            "email": "",
+            "homepage": ""
+        }
+    ],
+    "require": {
+    	"php": ">=5.3.3",
+		"guzzle/guzzle": "v3.8.1"
+    },
+    "autoload": {
+        "psr-0": { 
+        	"PushBullet\\": "src/" 
+        }
+    },
+}
