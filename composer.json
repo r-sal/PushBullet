@@ -12,12 +12,12 @@
         }
     ],
     "require": {
-    	"php": ">=5.3.3",
-		"guzzle/guzzle": "v3.8.1"
+        "php": ">=5.3.3",
+        "guzzle/guzzle": "v3.8.1"
     },
     "autoload": {
         "psr-0": { 
-        	"PushBullet\\": "src/" 
+            "PushBullet\\": "src/" 
         }
     },
 }
